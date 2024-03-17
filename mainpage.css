@@ -247,18 +247,27 @@ nav {
 }
 
 .header-main #hero-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  rotate: -2deg;
+  /* mix-blend-mode: exclusion; */
+}
+
+.header-img {
+  overflow: clip;
   margin-top: -1rem;
   position: absolute;
   height: 100%;
-  width: 120%;
-  object-fit: cover;
-  top: -7%;
+  width: 118%;
+  top: -3%;
   left: -12%;
   filter: opacity(60%);
-  z-index: -1000;
+  z-index: -1;
 }
 
 .header-exp {
+  box-shadow: inset 0px -200px 150px 10px rgba(0, 0, 0, 1);
   height: 100%;
   display: flex;
   justify-content: center;
