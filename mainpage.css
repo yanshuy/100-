@@ -324,6 +324,11 @@ nav {
   color: black;
   letter-spacing: -1px;
   cursor: pointer;
+  transition: all ease 250ms;
+}
+
+.main-button:hover {
+  box-shadow: 0px 0px 10px 0px #c3f504;
 }
 
 .main-button span {
