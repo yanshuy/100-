@@ -818,7 +818,7 @@ nav {
 }
 
 .section4-header {
-  width: 69vw;
+  width: 73vw;
   display: flex;
   justify-content: space-between;
   color: white;
@@ -873,13 +873,13 @@ nav {
 
 .section4-grid:first-child {
   grid-area: one;
-  width: 100%;
+  width: 51vw;
 }
 
 .section4-grid:first-child h1 {
   font-weight: 600;
   padding-block: 1rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 .section4-grid:nth-child(2) {
@@ -905,6 +905,10 @@ nav {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #4d64707f;
+}
+
+.section4-grids ul li:nth-child(3) {
+  border-bottom: none;
 }
 
 .section4-grids ul li h1 {
@@ -942,7 +946,7 @@ nav {
 }
 
 .section4-grids ul li:nth-child(5) h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 
