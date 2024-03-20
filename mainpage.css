@@ -250,7 +250,7 @@ nav {
   width: 100%;
   object-fit: cover;
   rotate: -2deg;
-  /* mix-blend-mode: exclusion; */
+  transform: translateZ(0px);
 }
 
 .header-img {
@@ -263,6 +263,8 @@ nav {
   left: -12%;
   filter: opacity(60%);
   z-index: -1;
+  perspective: 100px;
+  transform-style: preserve-3d;
 }
 
 .header-exp {
@@ -279,9 +281,6 @@ nav {
   justify-content: center;
   align-items: center;
   z-index: 100;
-  /* animation: headsc forwards;
-  animation-timeline: scroll();
-  animation-range-end: 80vh; */
 }
 
 @supports (animation-timeline: scroll()) {
@@ -293,7 +292,19 @@ nav {
     transform: translateY(7.5rem);
     animation: headsc forwards;
     animation-timeline: scroll();
-    animation-range-end: 80vh;
+    animation-range-end: 100vh;
+  }
+
+  .header-main #hero-img {
+    animation: headsc-img forwards;
+    animation-timeline: scroll();
+    animation-range-end: 100vh;
+  }
+}
+
+@keyframes headsc-img {
+  to {
+    transform: translateZ(-5px);
   }
 }
 
@@ -363,40 +374,51 @@ nav {
 .marquee-box ul {
   width: max-content;
   list-style: none;
+  user-select: none;
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  gap: 1rem;
   animation: marquee 40s linear infinite;
+}
+
+.marquee-box ul:hover {
+  animation-play-state: paused;
 }
 
 @keyframes marquee {
   to {
-    transform: translateX(calc(-50% - 0.5rem));
+    transform: translateX(calc(-50%));
   }
 }
 
 .marquee-box li {
-  font-size: 2rem;
-  font-weight: 700;
-  padding: 2rem;
+  width: max-content;
+  align-items: center;
+  text-align: center;
+  font-size: 2.25rem;
+  letter-spacing: -1px;
+  font-weight: 500;
+  padding: 1.5rem 1.2rem;
 }
 
 #circle {
+  margin-right: calc(2.5rem - 4px);
   display: inline-block;
   background-color: black;
-  height: 20px;
-  width: 20px;
+  height: 23px;
+  width: 23px;
   border-radius: 50%;
-  transform: translateY(-2.25px);
+  transform: translateY(-1px);
 }
 
 #triangle {
+  margin-right: calc(2.5rem - 4px);
   display: inline-block;
   background-color: black;
-  height: 20px;
-  width: 28px;
-  transform: translateY(-2.5px);
+  height: 23px;
+  width: 32px;
+  rotate: 180deg;
+  transform: translateY(1px);
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
@@ -409,14 +431,14 @@ nav {
 .section1-cards-header h1 {
   margin-top: 8rem;
   color: white;
-  font-size: 3vw;
+  font-size: 3.5vw;
   text-align: center;
 }
 
 .section1-cards-header h1 span {
   color: #c3f504;
   font-family: "Pixeluni";
-  font-size: 4.5vw;
+  font-size: 5vw;
   font-weight: 100;
 }
 
@@ -1015,7 +1037,7 @@ nav {
 }
 
 .section4-marquee .marquee-box #triangle {
-  transform: rotate(180deg);
+  /* transform: rotate(180deg); */
 }
 
 footer {
