@@ -402,7 +402,7 @@ nav {
 }
 
 #circle {
-  margin-right: calc(2.5rem - 4px);
+  margin-right: calc(2.5rem - 6px);
   display: inline-block;
   background-color: black;
   height: 23px;
@@ -412,7 +412,7 @@ nav {
 }
 
 #triangle {
-  margin-right: calc(2.5rem - 4px);
+  margin-right: calc(2.5rem - 6px);
   display: inline-block;
   background-color: black;
   height: 23px;
