@@ -304,7 +304,7 @@ nav {
 
 @keyframes headsc-img {
   to {
-    transform: translateZ(-5px);
+    transform: translateZ(-7px);
   }
 }
 
