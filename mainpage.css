@@ -289,7 +289,7 @@ nav {
   }
 
   .header-main-text {
-    transform: translateY(7.5rem);
+    transform: translateY(8rem);
     animation: headsc forwards;
     animation-timeline: scroll();
     animation-range-end: 100vh;
