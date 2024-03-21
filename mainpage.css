@@ -804,6 +804,7 @@ nav {
 }
 
 .section3-right-exp .section3-counter {
+  user-select: none;
   display: flex;
   align-items: center;
   color: #c3f504;
